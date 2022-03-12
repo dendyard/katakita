@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Kata Kita | Kompas Play</title>
+
+        <meta name="msapplication-TileColor" content="#91BDAD">
+        <meta name="theme-color" content="#91BDAD">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css?v=20">
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script src="kbbi5.js"></script>
+
+    </head>
+
+    <body>
+        <audio id='pilih'>
+        <source src="fx/tap.mp3" type="audio/mpeg">
+    </audio>
+        <audio id='jadi'>
+        <source src="fx/jadi.mp3" type="audio/mpeg">
+    </audio>
+        <audio id='bgsfx' loop>
+        <source src="fx/beautifulrussia.mp3" type="audio/mpeg">
+    </audio>
+
+        <div class="container">
+
+            <!-- <img src="assets/kotak.svg" id='k1' alt=""> -->
+            <img src="images/sound.png" alt="" id="msc">
+
+            <div id="hint" class="rowsq">Contekan 3X</div>
+            <div id="howto" class="rowsq"><img src="images/help.png"></div>
+
+            <div id="cover">
+                <img src="images/batik.png" id='k0' alt="">
+
+                <div class="c-topdown" id="cltop">
+                    <img src="images/logo.png" alt="" id="bgin0">
+                    <img src="images/yukmain.png" alt="" id="startn">
+                    <img src="images/papanskor.png" alt="" id="papanskor">
+                </div>
+                <div id="lv2">
+                    <img src="images/logo.png" alt="" id="bgin1">
+                    <img src="images/pilihjml.png" class="btnlvel mb-20" id="pl1">
+                    <img src="images/bmudah.png" class="btnlvel" id="bl1">
+                    <img src="images/bsedang.png" class="btnlvel" id="bl2">
+                    <img src="images/bsulit.png" class="btnlvel" id="bl3">
+                </div>
+
+            </div>
+
+            <div id="howt">
+                <img src="assets/close.svg" alt="" id="closebtn">
+                <img src="assets/howto.svg?v=1" alt="" id="hwt">
+            </div>
+
+            <div id="hht"></div>
+            <div id="boards">
+                <div id="tpesan" class="text-left">Upps!!</div>
+                <div id="pesan" class="text-left">Jawabannya adalah :<br>
+                    <p class="ans2" id='thsec'></p>
+                </div>
+
+                <img src="assets/mainlagi.svg" id='ml'>
+            </div>
+
+            <div id="gameplay">
+                <div id="rwa" class="rowsq">
+                    <div id="rwa1" class="colsq">&nbsp;</div>
+                    <div id="rwa2" class="colsq">&nbsp;</div>
+                    <div id="rwa3" class="colsq">&nbsp;</div>
+                    <div id="rwa4" class="colsq">&nbsp;</div>
+                    <div id="rwa5" class="colsq">&nbsp;</div>
+                    <div id="rwa6" class="colsq">&nbsp;</div>
+                </div>
+
+                <div id="rwb" class="rowsq">
+                    <div id="rwb1" class="colsq">&nbsp;</div>
+                    <div id="rwb2" class="colsq">&nbsp;</div>
+                    <div id="rwb3" class="colsq">&nbsp;</div>
+                    <div id="rwb4" class="colsq">&nbsp;</div>
+                    <div id="rwb5" class="colsq">&nbsp;</div>
+                    <div id="rwb6" class="colsq">&nbsp;</div>
+                </div>
+                <div id="rwc" class="rowsq">
+                    <div id="rwc1" class="colsq">&nbsp;</div>
+                    <div id="rwc2" class="colsq">&nbsp;</div>
+                    <div id="rwc3" class="colsq">&nbsp;</div>
+                    <div id="rwc4" class="colsq">&nbsp;</div>
+                    <div id="rwc5" class="colsq">&nbsp;</div>
+                    <div id="rwc6" class="colsq">&nbsp;</div>
+                </div>
+                <div id="rwd" class="rowsq">
+                    <div id="rwd1" class="colsq">&nbsp;</div>
+                    <div id="rwd2" class="colsq">&nbsp;</div>
+                    <div id="rwd3" class="colsq">&nbsp;</div>
+                    <div id="rwd4" class="colsq">&nbsp;</div>
+                    <div id="rwd5" class="colsq">&nbsp;</div>
+                    <div id="rwd6" class="colsq">&nbsp;</div>
+                </div>
+                <div id="rwe" class="rowsq">
+                    <div id="rwe1" class="colsq">&nbsp;</div>
+                    <div id="rwe2" class="colsq">&nbsp;</div>
+                    <div id="rwe3" class="colsq">&nbsp;</div>
+                    <div id="rwe4" class="colsq">&nbsp;</div>
+                    <div id="rwe5" class="colsq">&nbsp;</div>
+                    <div id="rwe6" class="colsq">&nbsp;</div>
+                </div>
+                <div id="rwf" class="rowsq">
+                    <div id="rwf1" class="colsq">&nbsp;</div>
+                    <div id="rwf2" class="colsq">&nbsp;</div>
+                    <div id="rwf3" class="colsq">&nbsp;</div>
+                    <div id="rwf4" class="colsq">&nbsp;</div>
+                    <div id="rwf5" class="colsq">&nbsp;</div>
+                    <div id="rwf6" class="colsq">&nbsp;</div>
+                </div>
+                <div id="skkr"><img src="images/ph_timer.png" id='phtimer'><span id="mmss">00:00</span></div>
+            </div>
+
+            <div id="ckeyboard">
+
+                <div id="rwa" class="rowsq">
+                    <div id="q" class="colsq2">Q</div>
+                    <div id="w" class="colsq2">W</div>
+                    <div id="e" class="colsq2">E</div>
+                    <div id="r" class="colsq2">R</div>
+                    <div id="t" class="colsq2">T</div>
+                    <div id="y" class="colsq2">Y</div>
+                    <div id="u" class="colsq2">U</div>
+                    <div id="i" class="colsq2">I</div>
+                    <div id="o" class="colsq2">O</div>
+                    <div id="p" class="colsq2">P</div>
+                </div>
+                <div id="rwb" class="rowsq">
+                    <div id="a" class="colsq2">A</div>
+                    <div id="s" class="colsq2">S</div>
+                    <div id="d" class="colsq2">D</div>
+                    <div id="f" class="colsq2">F</div>
+                    <div id="g" class="colsq2">G</div>
+                    <div id="h" class="colsq2">H</div>
+                    <div id="j" class="colsq2">J</div>
+                    <div id="k" class="colsq2">K</div>
+                    <div id="l" class="colsq2">L</div>
+                </div>
+                <div id="rwd" class="rowsq">
+                    <div id="ent" class="colsq2 enterbtn">ENTER</div>
+                    <div id="z" class="colsq2">Z</div>
+                    <div id="x" class="colsq2">X</div>
+                    <div id="c" class="colsq2">C</div>
+                    <div id="v" class="colsq2">V</div>
+                    <div id="b" class="colsq2">B</div>
+                    <div id="n" class="colsq2">N</div>
+                    <div id="m" class="colsq2">M</div>
+                    <div id="del" class="colsq2 enterbtn">&nbsp;</div>
+                </div>
+            </div>
+
+        </div>
+        <img src="images/present.png" alt="" id="presentedby">
+        <div id="headerr"></div>
+        <div id="footters"></div>
+        <div id="navbar">
+            <img src="images/logokomplay2.png" id="logokomplay">
+        </div>
+        <!-- <div id="hrdy">code by Dhany Da Vinci</div> -->
+    </body>
+
+    <script>
+        let ans = [];
+        let lvl = 0;
+        let scokr = 0;
+        let prefix = ['rwa', 'rwb', 'rwc', 'rwd', 'rwe', 'rwf'];
+        let keyboardchr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        let maximum = 5471;
+        let minimum = 0;
+        let mus = false;
+        var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+        var guestk = kbbi6[randomnumber];
+        var gametime;
+        var totalSeconds = 0;
+        var psn = '';
+        console.log(guestk)
+        hint.style.display = 'none';
+
+        function d(id) {
+            return document.getElementById(id);
+        }
+
+        howt.style.opacity = '0';
+        startn.addEventListener('click', startgame);
+        closebtn.addEventListener('click', closehowto);
+        howto.addEventListener('click', openHow);
+
+        bl1.addEventListener('click', letsbegin);
+        bl2.addEventListener('click', letsbegin);
+        bl3.addEventListener('click', letsbegin);
+
+        hht.addEventListener('click', () => {
+            hht.style.display = 'none';
+        })
+
+        hint.addEventListener('click', () => {
+            alert(psn);
+            // hht.style.display = 'block';
+            // hht.innerHTML = psn + '<br><br> <center>Tap untuk menutup</center>';
+        });
+
+        msc.addEventListener('click', () => {
+            if (mus) {
+                bgsfx.pause();
+                mus = false;
+            } else {
+                bgsfx.play();
+                mus = true;
+            }
+
+        })
+
+        function openHow() {
+            howt.style.display = 'block';
+            TweenMax.to(howt, 0.5, {
+                alpha: 1,
+                ease: Expo.easeOut
+            });
+        }
+
+        function closehowto() {
+            howt.style.display = 'none';
+            howt.style.opacity = '0';
+        }
+
+        //Init Splash Screen
+        TweenMax.to(k0, 0, {
+            y: -300,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(bgin0, 0, {
+            scale: 0,
+            rotation: 180,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(startn, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(papanskor, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(bl1, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(bl2, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(bl3, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(bgin1, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+        TweenMax.to(pl1, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+
+        lv2.style.display = 'none';
+        splashscreen();
+
+        function selectlevel() {
+            lv2.style.display = 'block';
+            TweenMax.to(cltop, 0.5, {
+                scale: 0,
+                alpha: 0,
+                ease: Back.easeIn,
+                onComplete: () => {
+                    TweenMax.to(bgin1, 0.5, {
+                        scale: 1,
+                        ease: Expo.easeOut,
+                    });
+                    TweenMax.to(pl1, 0.5, {
+                        scale: 1,
+                        ease: Expo.easeOut,
+                    });
+                    TweenMax.to(bl1, 0.5, {
+                        scale: 1,
+                        ease: Expo.easeOut,
+                        delay: 0.1
+                    });
+                    TweenMax.to(bl2, 0.5, {
+                        scale: 1,
+                        ease: Expo.easeOut,
+                        delay: 0.2
+                    });
+                    TweenMax.to(bl3, 0.5, {
+                        scale: 1,
+                        ease: Expo.easeOut,
+                        delay: 0.3
+                    });
+                }
+            });
+
+
+        }
+
+        function splashscreen() {
+            //startn.style.display = 'none';
+
+            TweenMax.to(k0, 0.5, {
+                y: 0,
+                ease: Expo.easeOut,
+                delay: 0.2
+            });
+
+            TweenMax.to(bgin0, 0.8, {
+                scale: 1,
+                rotation: 0,
+                ease: Back.easeOut,
+                delay: 0.5,
+                onComplete: () => {
+                    TweenMax.to(bgin0, 0.5, {
+                        scale: 0.7,
+                        y: -100,
+                        ease: Expo.easeIn,
+                    });
+                    TweenMax.to(startn, 0.5, {
+                        scale: 1,
+                        ease: Back.easeOut,
+                        delay: 0.5,
+                    });
+                    TweenMax.to(papanskor, 0.5, {
+                        scale: 1,
+                        ease: Back.easeOut,
+                        delay: 0.8,
+                    });
+
+                }
+            });
+        }
+
+        function letsbegin(e) {
+            presentedby.style.display = 'none';
+
+            switch (e.target.id) {
+                case 'bl1':
+                    break;
+                case 'bl2':
+                    break;
+                case 'bl3':
+                    break;
+            }
+            gametime = setInterval(setTime, 1000);
+            TweenMax.to(headerr, 0.5, {
+                alpha: 1,
+                ease: Expo.easeOut,
+                delay: 1
+            });
+
+            TweenMax.to(howto, 0.5, {
+                alpha: 1,
+                ease: Expo.easeOut,
+                delay: 1
+            });
+
+            TweenMax.to(msc, 0.5, {
+                alpha: 1,
+                ease: Expo.easeOut,
+                delay: 1
+            });
+
+            TweenMax.to(cover, 1, {
+                x: 500,
+                ease: Expo.easeIn,
+                onComplete: () => {
+                    cover.style.display = 'none';
+                    ckeyboard.style.display = 'block';
+                }
+            });
+        }
+
+        function startgame() {
+            //bgsfx.play();
+            selectlevel();
+            // TweenMax.to(cover, 1, {
+            //     x: 500,
+            //     ease: Expo.easeIn,
+            //     onComplete: () => {
+            //         cover.style.display = 'none';
+            //         ckeyboard.style.display = 'block';
+            //     }
+            // });
+        }
+
+        TweenMax.to(boards, 0, {
+            scale: 0,
+            ease: Expo.easeOut
+        });
+
+        ml.addEventListener('click', () => {
+            //location.reload();
+
+            ans = [];
+            lvl = 0;
+            totalSeconds = 0;
+            gametime = setInterval(setTime, 1000);
+
+            randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+            guestk = kbbi6[randomnumber];
+            tpesan.innerHTML = '';
+            pesan.innerHTML = '';
+            console.log(guestk);
+            TweenMax.to(boards, 0, {
+                scale: 0,
+                ease: Back.easeOut
+            });
+            TweenMax.to(gameplay, 0.3, {
+                alpha: 1,
+                ease: Sine.easeOut
+            });
+            TweenMax.to(ckeyboard, 0.3, {
+                alpha: 1,
+                ease: Sine.easeOut
+            });
+            skkr.style.display = 'block';
+            TweenMax.to(tpesan, 0, {
+                alpha: 0,
+                ease: Sine.easeOut
+            });
+            TweenMax.to(pesan, 0, {
+                alpha: 0,
+                ease: Sine.easeOut
+            });
+            psn = '';
+            getpenjelasan();
+            for (let i = 0; i < 6; i++) {
+                for (let j = 0; j < 6; j++) {
+                    // console.log('i=' + i);
+                    // console.log('j=' + prefix[i] + (j+1));
+                    d(prefix[i] + (j + 1)).style.backgroundColor = '#fff';
+                    //d(ans[i]).style.backgroundColor = '#ffeb3b';
+                    d(prefix[i] + (j + 1)).innerHTML = '&nbsp;';
+                }
+            }
+
+            for (let i = 0; i < keyboardchr.length; i++) {
+                d(keyboardchr[i]).style.backgroundColor = '#fff';
+            }
+
+
+        });
+
+        d('q').addEventListener('click', inpkey);
+        d('w').addEventListener('click', inpkey);
+        d('e').addEventListener('click', inpkey);
+        d('r').addEventListener('click', inpkey);
+        d('t').addEventListener('click', inpkey);
+        d('y').addEventListener('click', inpkey);
+        d('u').addEventListener('click', inpkey);
+        d('i').addEventListener('click', inpkey);
+        d('o').addEventListener('click', inpkey);
+        d('p').addEventListener('click', inpkey);
+
+        d('a').addEventListener('click', inpkey);
+        d('s').addEventListener('click', inpkey);
+        d('d').addEventListener('click', inpkey);
+        d('f').addEventListener('click', inpkey);
+        d('g').addEventListener('click', inpkey);
+        d('h').addEventListener('click', inpkey);
+        d('j').addEventListener('click', inpkey);
+        d('k').addEventListener('click', inpkey);
+        d('l').addEventListener('click', inpkey);
+
+        d('z').addEventListener('click', inpkey);
+        d('x').addEventListener('click', inpkey);
+        d('c').addEventListener('click', inpkey);
+        d('v').addEventListener('click', inpkey);
+        d('b').addEventListener('click', inpkey);
+        d('n').addEventListener('click', inpkey);
+        d('m').addEventListener('click', inpkey);
+        d('ent').addEventListener('click', goword);
+        d('del').addEventListener('click', popwords);
+
+
+        function inpkey(e) {
+            pilih.currentTime = 0;
+            pilih.play();
+            TweenMax.to(d(e.target.id), 0.1, {
+                scale: 1.5,
+                ease: Expo.easeOut
+            });
+            TweenMax.to(d(e.target.id), 0.1, {
+                scale: 1,
+                ease: Expo.easeOut,
+                delay: 0.1
+            });
+            putwords(e.target.id);
+
+        }
+
+        function goword() {
+            if (lvl < 6) {
+                if (ans.length == 6) {
+                    checkmine();
+                } else {
+                    jungling();
+                }
+                jadi.currentTime = 0;
+                jadi.play();
+            } else {
+                gameover();
+            }
+        }
+
+        getpenjelasan();
+
+        function getpenjelasan() {
+            //https://kbbi-api-amm.herokuapp.com/search?q=buyung
+            hint.style.display = 'none';
+            var tmppsn = '';
+            $.ajax({
+                type: "GET",
+                url: "https://kbbi-api-amm.herokuapp.com/search?q=" + guestk,
+                dataType: "json",
+            }).done(function(result) {
+                //console.log(result);
+                //console.log(result.data.resultLists.length);
+                psn = 'Hint tidak tersedia :(';
+                var ss = String(result.data.resultLists[0].arti);
+
+                if (result.data.resultLists.length > 0) {
+                    for (let v = 0; v < result.data.resultLists.length; v++) {
+                        console.log(result.data.resultLists[v].arti);
+                        tmppsn += result.data.resultLists[v].arti + "\n";
+                    }
+                }
+
+                //console.log('DE: ' + ss.length);
+                hint.style.display = 'block';
+                if (ss.length > 0) {
+                    hint.style.display = 'block';
+                    psn = tmppsn;
+                }
+
+            });
+        }
+
+        function win() {
+
+            hint.style.display = 'none';
+
+            TweenMax.to(boards, 0.5, {
+                scale: 1,
+                ease: Back.easeOut,
+                delay: 0.3
+            });
+            TweenMax.to(gameplay, 0.5, {
+                alpha: 0,
+                ease: Sine.easeOut
+            });
+            TweenMax.to(ckeyboard, 0.5, {
+                alpha: 0,
+                ease: Sine.easeOut,
+                delay: 0.2
+            });
+
+            TweenMax.to(tpesan, 0.5, {
+                alpha: 1,
+                ease: Sine.easeOut,
+                delay: 0.8
+            });
+            TweenMax.to(pesan, 0.5, {
+                alpha: 1,
+                ease: Sine.easeOut,
+                delay: 0.8
+            });
+            // switch (lvl) {
+            //     case 0:
+            //         scokr += 500;
+            //         break;
+            //     case 1:
+            //         scokr += 400;
+            //         break;
+            //     case 2:
+            //         scokr += 300;
+            //         break;
+            //     case 3:
+            //         scokr += 200;
+            //         break;
+            //     case 4:
+            //         scokr += 100;
+            //         break;
+            // }
+            tpesan.innerHTML = 'Detik tebak :  ' + totalSeconds;
+            pesan.innerHTML = '<br>Kamu berhasil!!<p class="ans2" id="thsec">' + guestk.toUpperCase(); + '</p>';
+            mmss.innerHTML = '00:00'
+            skkr.style.display = 'none';
+        }
+
+
+
+        function setTime() {
+            let fss = '00';
+            let fmm = '00';
+            ++totalSeconds;
+            fss = pad(totalSeconds % 60);
+            fmm = pad(parseInt(totalSeconds / 60));
+            mmss.innerHTML = fmm + ':' + fss
+
+        }
+
+        function pad(val) {
+            var valString = val + "";
+            if (valString.length < 2) {
+                return "0" + valString;
+            } else {
+                return valString;
+            }
+        }
+
+
+        function gameover() {
+            hint.style.display = 'none';
+            tpesan.innerHTML = 'Upps!!<br><br>Skor Kamu : ' + scokr;
+            pesan.innerHTML = '<br>Jawabannya adalah :<p class="ans2" id="thsec">' + guestk.toUpperCase(); + '</p>';
+
+            TweenMax.to(boards, 0.5, {
+                scale: 1,
+                ease: Back.easeOut,
+                delay: 0.3
+            });
+            TweenMax.to(gameplay, 0.5, {
+                alpha: 0,
+                ease: Sine.easeOut
+            });
+            TweenMax.to(ckeyboard, 0.5, {
+                alpha: 0,
+                ease: Sine.easeOut,
+                delay: 0.2
+            });
+
+            TweenMax.to(tpesan, 0.5, {
+                alpha: 1,
+                ease: Sine.easeOut,
+                delay: 0.8
+            });
+            TweenMax.to(pesan, 0.5, {
+                alpha: 1,
+                ease: Sine.easeOut,
+                delay: 0.8
+            });
+
+            skkr.style.display = 'none';
+
+        }
+
+
+        function jungling() {
+            var andelay = 0;
+
+            //Animate untuk efek WOW
+            for (let i = 0; i < 6; i++) {
+                TweenMax.to(d(prefix[lvl] + (i + 1)), 0.2, {
+                    scale: 1.2,
+                    ease: Sine.easeOut,
+                    delay: andelay
+                });
+                TweenMax.to(d(prefix[lvl] + (i + 1)), 0.2, {
+                    scale: 1,
+                    ease: Sine.easeOut,
+                    delay: andelay + 0.09
+                });
+                andelay += 0.05;
+            }
+        }
+
+        function checkmine() {
+            var tmcheck;
+            var animefect = 0.1;
+            var score = 0;
+            tmcheck = guestk.split('');
+
+            //Check posisi karakter yang sama
+            for (let i = 0; i < 6; i++) {
+                if (tmcheck[i] == ans[i]) {
+                    d(prefix[lvl] + (i + 1)).style.backgroundColor = '#4caf50';
+                    d(ans[i]).style.backgroundColor = '#4caf50';
+                    score++;
+                } else {
+                    //Tidak ada karakter
+                    d(prefix[lvl] + (i + 1)).style.backgroundColor = '#c7c3c3';
+                    d(ans[i]).style.backgroundColor = '#c7c3c3';
+                    //Check apakah terdapat karakter tersebut
+                    for (let j = 0; j < 6; j++) {
+                        if (tmcheck[j] == ans[i]) {
+                            d(prefix[lvl] + (i + 1)).style.backgroundColor = '#ffeb3b';
+                            d(ans[i]).style.backgroundColor = '#ffeb3b';
+                        }
+                    }
+                }
+            }
+
+            //Animate untuk efek WOW
+            for (let i = 0; i < 6; i++) {
+                TweenMax.to(d(prefix[lvl] + (i + 1)), 0.1, {
+                    scale: 1.2,
+                    ease: Sine.easeOut,
+                    delay: animefect
+                });
+                TweenMax.to(d(prefix[lvl] + (i + 1)), 0.1, {
+                    scale: 1,
+                    ease: Sine.easeOut,
+                    delay: 0.1 + animefect
+                });
+                animefect += 0.02;
+            }
+            //console.log(score);
+            if (score == 6) {
+                lvl = 0;
+                ans = [];
+                setTimeout(win, 1000);
+                clearInterval(gametime);
+            }
+
+            ans = [];
+            lvl++;
+            if (lvl == 6) {
+                clearInterval(gametime);
+                setTimeout(gameover, 1000);
+            }
+        }
+
+        function putwords(val) {
+
+            if (ans.length < 6) {
+                ans.push(val);
+                d(prefix[lvl] + (ans.length)).innerHTML = val.toUpperCase();
+            }
+
+        }
+
+        function popwords(val) {
+            if (ans.length > 0) {
+                ans.pop();
+                d(prefix[lvl] + (ans.length + 1)).innerHTML = '&nbsp;';
+            }
+        }
+
+        //cta.addEventListener('click', startGame);
+
+        function startGame() {
+            TweenMax.to(bgin, 0.5, {
+                alpha: 0,
+                ease: Back.easeIn
+            });
+            TweenMax.to(subcta, 0.5, {
+                alpha: 0,
+                ease: Back.easeIn,
+                delay: 0.1
+            });
+            TweenMax.to(cta, 0.5, {
+                alpha: 0,
+                ease: Back.easeIn,
+                delay: 0.1
+            });
+        }
+    </script>
+
+</html>

@@ -1,0 +1,430 @@
+body {
+    /* Gradasi / Rad1 */
+    overflow-x: hidden;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    background-image: url(images/bggrad.svg);
+    background-size: cover;
+}
+
+#bgheader {
+    position: absolute;
+    width: 100%;
+}
+
+#k1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -10px;
+    width: 100%;
+}
+
+#bgin {
+    position: absolute;
+    /* left: 0; */
+    right: 10px;
+    margin: auto;
+    top: 6px;
+    width: 145px;
+}
+
+#cta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 100px;
+}
+
+#subcta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 180px;
+}
+
+.colsq {
+    width: 40px;
+    height: 32px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    padding-top: 13px;
+    border-radius: 4px;
+}
+
+.colsq2 {
+    width: 28px;
+    height: 30px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 2px 1px 2px 1px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 2px;
+    color: #EE4c2c;
+}
+
+.enterbtn {
+    width: 50px;
+    font-size: 10px;
+    padding-top: 15px;
+    height: 25px;
+    background-color: #EE4c2c;
+    color: #fff;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+#gameplay {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -151px;
+    bottom: 0;
+    margin: auto;
+    height: 294px;
+}
+
+#kk {
+    position: absolute;
+    z-index: 10;
+    bottom: 100px;
+}
+
+.btnlvel {
+    width: 250px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+#lv2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    height: 373px;
+}
+
+#ckeyboard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    bottom: 65px;
+    z-index: 1001;
+    display: none;
+}
+
+#boards {
+    position: absolute;
+    width: 220px;
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 220px;
+    z-index: 100;
+    background-image: url(assets/masinu.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 1002;
+}
+
+#ml {
+    margin-top: 65px;
+}
+
+.ans2 {
+    font-size: 30px;
+    color: #ffb700;
+}
+
+.text-left {
+    text-align: left;
+}
+
+#tpesan {
+    opacity: 0;
+}
+
+#pesan {
+    opacity: 0;
+}
+
+#del {
+    background-image: url(assets/backspace.svg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cover {
+    width: 100%;
+    background-color: #91BDAD;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* max-width: 360px; */
+}
+
+#icn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#ftimg {
+    position: absolute;
+    width: 100%;
+    z-index: 130;
+    bottom: 0;
+}
+
+#startn {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 49px;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+}
+
+#presentedby {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 100px;
+}
+
+.c-topdown {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 400px;
+}
+
+#logokomplay {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 140px;
+}
+
+#footters {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 50px;
+    background-image: url(images/footer.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    z-index: 100;
+}
+
+#headerr {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    background-image: url(images/header.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    z-index: 20;
+    opacity: 0;
+}
+
+#navbar {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    bottom: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+#papanskor {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 161px;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+}
+
+#k0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    width: 300px;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    max-width: 700px;
+}
+
+#bgin0 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 35px;
+    width: 220px;
+    bottom: 0;
+}
+
+#bgin1 {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 126px;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+#sbc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(180deg);
+    width: 300px;
+}
+
+#howto {
+    width: 37px;
+    left: 8px;
+    margin: auto;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 30px;
+    position: absolute;
+    top: 27px;
+    text-align: center;
+    z-index: 180;
+    opacity: 0;
+    z-index: 102;
+}
+
+#howto img {
+    width: 100%;
+}
+
+#howt {
+    position: absolute;
+    z-index: 1200;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    background-color: #000;
+    display: none;
+}
+
+#hint {
+    position: absolute;
+    top: 32px;
+    right: 14px;
+    font-size: 16px;
+    width: 90px;
+    height: 13px;
+    z-index: 100;
+    background-color: #fff;
+    padding: 10px;
+    font-family: arial;
+    font-size: 11px;
+    text-align: center;
+    color: #EE4c2c;
+    border: solid 1px;
+    z-index: 100;
+}
+
+#closebtn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+}
+
+#skkr {
+    margin-top: 8px;
+    left: 0;
+    font-size: 16px;
+    /* margin: auto; */
+    text-align: center;
+    right: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+#skkr img {
+    width: 23px;
+    vertical-align: middle;
+}
+
+#msc {
+    position: absolute;
+    left: 57px;
+    top: 32px;
+    z-index: 300;
+    opacity: 1;
+    width: 37px;
+    opacity: 0;
+}
+
+#hht {
+    position: fixed;
+    width: 320px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 30%;
+    z-index: 200;
+    background-color: white;
+    padding: 10px;
+    display: none;
+}
